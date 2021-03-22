@@ -3,7 +3,6 @@ import {
   Route,
   Switch,
   Redirect,
-  withRouter
 } from 'react-router-dom';
 import MainPage from './components/mainPage/MainPage';
 import TextbookPage from './components/textbookPage/TextbookPage';

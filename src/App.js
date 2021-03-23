@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/styles.css';
 import {
   Route,
   Switch,

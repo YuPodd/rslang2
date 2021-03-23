@@ -10,6 +10,5 @@ export default function Header(){
                 <Link to="/statisticPage">Statistic</Link>
             </nav>
         </header>
-
     )
 }

@@ -1,5 +1,7 @@
+import {Link} from 'react-router-dom'
+
 export default function MainPage() {
   return(
-    <h1>MainPage</h1>
+      <div>Main</div>
   )
 }

@@ -1,7 +1,7 @@
 export default function TextbookPage() {
     return(
         <div>
-            Textbook
+            Study
         </div>
     )
 }

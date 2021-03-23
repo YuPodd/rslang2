@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
 import Video from "./Video";
-// import main_image from '../../assets/main_image.jpg'
 
 export default function MainPage() {
   return (

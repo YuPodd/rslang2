@@ -12,5 +12,20 @@
     left: 0;
     bottom: 0;
     text-align: center;
-    background-color: #ddd;
+    box-shadow: 0 -2px 8px #f0f1f2;
+    border-top: 1px solid #f0f0f0;
+   
   }
+  .footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.github_wrapper > a{
+  margin-left: 10%;
+  color: rgba(0, 0, 0, 0.692);
+  
+}
+.rs_logo{
+    opacity: 60%;
+}

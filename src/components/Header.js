@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header>
       <Menu
-        style={{ display: "flex", justifyContent: "space-around", boxShadow: "0 2px 8px #f0f1f2", fontSize: "16px" }}
+        style={{ display: "flex", justifyContent: "space-around", boxShadow: "0 2px 8px #f0f1f2", fontSize: "16px",background: "#ffffffd9" }}
         mode="horizontal"
       >
         <Menu.Item key="main">

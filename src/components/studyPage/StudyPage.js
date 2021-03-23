@@ -1,4 +1,4 @@
-export default function TextbookPage() {
+export default function StudyPage() {
     return(
         <div>
             Study

@@ -14,7 +14,7 @@ export default function Header() {
           <Link to="/mainPage"><h2 className="title">RS Lang</h2></Link>
         </Menu.Item>
         <Menu.Item key="study" icon={<BookOutlined />}>
-          <Link to="/textbookPage">Study</Link>
+          <Link to="/studyPage">Study</Link>
         </Menu.Item>
         <Menu.Item key="games"icon={<PlayCircleOutlined />}>
           <Link to="/gamesPage">Games</Link>

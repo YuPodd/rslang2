@@ -5,7 +5,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 import MainPage from './components/mainPage/MainPage';
-import TextbookPage from './components/textbookPage/TextbookPage';
+import StudyPage from './components/studyPage/StudyPage';
 import GamesPage from './components/gamesPage/GamesPage';
 import StatisticsPage from './components/statisticsPage/statisticsPage';
 import Header from './components/Header';
@@ -18,7 +18,7 @@ function App() {
       <Header/>
       <Switch>
         <Route path='/mainPage' component={MainPage} />
-        <Route path='/textbookPage' component={TextbookPage} />
+        <Route path='/studyPage' component={StudyPage} />
         <Route path='/gamesPage' component={GamesPage} />
         <Route path='/statisticsPage' component={StatisticsPage} />
         <Redirect from='/' to='/mainPage'/>

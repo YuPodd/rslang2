@@ -11,13 +11,12 @@ export default function StudyPage() {
         id={number}
         key={number}
       >
-        <Link to={`/unit${number}`}>Unit {number}</Link>
+        <Link to={`/unit/${number}`}>Unit {number}</Link>
       </div>
     );
   });
 
   return (
-    
     <div className="study_wrapper">
       <div className="units_wrapper">{unit}</div>
     </div>

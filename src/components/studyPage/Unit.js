@@ -1,3 +1,9 @@
+import { useParams } from "react-router";
+
 export default function Unit(){
-    // TODO
+    let {number} = useParams();
+    return (
+    <div>Unit {number}</div>
+    );
+ 
 }

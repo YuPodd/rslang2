@@ -9,7 +9,7 @@ export default function Unit() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch(`https://react-learnwords-example.herokuapp.com/words?group=${number-1}&page=1`)
+    fetch(`https://rs-lang.herokuapp.com/words?group=${number-1}&page=1`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -35,7 +35,7 @@ export default function Unit() {
       <ul>
         {items.map(item => (
           <li key={item.id}>
-            {item.word} {item.wordTranslate}
+           <img src={item.image}></img>{item.word} {item.wordTranslate}
           </li>
         ))}
       </ul>

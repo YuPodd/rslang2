@@ -16,7 +16,7 @@ import {numberOfUnits} from "./constants/constants"
 function App() {
  const unitRoute = numberOfUnits.map((number) => {
     return (
-      <Route path={`/unit${number}`} component={Unit}/>
+      <Route path="/unit/:number" component={Unit}/>
     )
   });
    return (

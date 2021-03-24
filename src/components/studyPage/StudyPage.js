@@ -1,3 +1,5 @@
+import "animate.css/animate.css";
+
 export default function StudyPage() {
   const numberOfUnits = [
     "1",
@@ -7,11 +9,12 @@ export default function StudyPage() {
     "5",
     "6",
   ];
-  const units = numberOfUnits.map((number) => {
-    return <div className="unit_div" id="number">Unit {number}</div>;
+  const unit = numberOfUnits.map((number) => {
+    return <div className="unit_div animate__animated animate__backInLeft" id="number"><a href="#">Unit {number}</a></div>;
   });
   return <div className="study_wrapper">
       <div className="units_wrapper">
-      {units}
+      {unit}
+      
       </div></div>;
 }

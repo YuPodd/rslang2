@@ -50,22 +50,26 @@ footer {
   width: auto;
   max-height: 300px;
 }
-.study_wrapper{
+.study_wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
-.units_wrapper{
+.units_wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(2, 200px);
- grid-gap: 50px;
- padding: 50px;
- 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 50px;
+  padding: 50px;
+  max-width: 60%;
+  margin: 0 auto;
 }
-.unit_div{
+.unit_div {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 200px;
   font-size: 20px;
   background: aliceblue;
+  color: #40a9ff;
+  border-radius: 5px;
+  font-weight: 600;
 }

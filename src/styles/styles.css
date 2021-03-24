@@ -50,3 +50,22 @@ footer {
   width: auto;
   max-height: 300px;
 }
+.study_wrapper{
+  display: flex;
+  justify-content: center;
+}
+.units_wrapper{
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(2, 200px);
+ grid-gap: 50px;
+ padding: 50px;
+ 
+}
+.unit_div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: aliceblue;
+}

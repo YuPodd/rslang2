@@ -1,17 +1,28 @@
-import {SHOW_SIGNUP,HIDE_SIGNUP,SHOW_SIGNIN,HIDE_SIGNIN} from './ActionTypes';
+import { SHOW_SIGNUP, HIDE_SIGNUP, SHOW_SIGNIN, HIDE_SIGNIN, LOGIN_USER, LOGOUT } from './ActionTypes';
 
 const defaultState = {
   isSignupVisible: false,
-  isSigninVisible: false
+  isSigninVisible: false,
+  user: {}
 };
 
 const rootReducer = (state = defaultState, action) =>{
   switch (action.type) {
+    case LOGOUT:
+      return {
+        ...state,
+        user: {}
+      }
+    case LOGIN_USER:
+      return {
+        ...state,
+        user: action.user
+      }
     case SHOW_SIGNUP:
-    return {
-      ...state,
-      isSignupVisible : true,
-    }
+      return {
+        ...state,
+        isSignupVisible : true,
+      }
     case HIDE_SIGNUP:
       return {
         ...state,

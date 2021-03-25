@@ -11,12 +11,18 @@ import StatisticsPage from './components/statisticsPage/statisticsPage';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Unit from './components/studyPage/Unit'
-import {numberOfUnits} from "./constants/constants"
+import {listOfGames, numberOfUnits} from "./constants/constants"
+import Game from './components/gamesPage/Game'
 
 function App() {
  const unitRoute = numberOfUnits.map((number) => {
     return (
       <Route path="/unit/:number" component={Unit}/>
+    )
+  });
+  const gameRoute = listOfGames.map((game) => {
+    return (
+      <Route path="/games/:game" component={Game}/>
     )
   });
    return (
@@ -28,6 +34,7 @@ function App() {
         <Route path='/gamesPage' component={GamesPage} />
         <Route path='/statisticsPage' component={StatisticsPage} />
         {unitRoute}
+        {gameRoute}
         <Redirect from='/' to='/mainPage'/>
       </Switch>
         <Footer/>

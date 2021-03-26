@@ -54,7 +54,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-.units_wrapper, .study_wrapper {
+.units_wrapper, .games_wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 50px;
@@ -62,7 +62,7 @@ footer {
   max-width: 60%;
   margin: 0 auto;
 }
-.unit_div, .study_div {
+.unit_div, .games_div {
   display: flex;
   justify-content: center;
   align-items: center;

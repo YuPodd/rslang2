@@ -7,7 +7,7 @@ export default function GamesPage() {
         const games = listOfGames.map((game) => {
             return (
               <div
-                className="unit_div animate__animated animate__backInLeft"
+                className="study_div animate__animated animate__backInLeft"
                 id={game.name}
                 key={game.name}
               >
@@ -17,8 +17,8 @@ export default function GamesPage() {
           });
         
           return (
-            <div className="study_wrapper">
-              <div className="units_wrapper">{games}</div>
-            </div>
+
+              <div className="study_wrapper">{games}</div>
+  
           );
 }

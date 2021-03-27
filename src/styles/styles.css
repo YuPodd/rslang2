@@ -1,39 +1,50 @@
 .App {
+  overflow: hidden;
   text-align: center;
   font-size: 16px;
   background-image: url("../assets/main_image.jpg");
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
 .title {
   color: #40a9ff;
 }
+
 footer {
+  padding: 0 10px;
   width: 100%;
   height: 40px;
-  position: fixed;
+  /* position: fixed;
   left: 0;
   bottom: 0;
+  right: 0; */
   text-align: center;
   box-shadow: 0 -2px 8px #f0f1f2;
   border-top: 1px solid #f0f0f0;
   background: #ffffffd9;
 }
+
 .footer_wrapper {
   display: flex;
   justify-content: space-between;
 }
 
-.github_wrapper > a {
+.github_wrapper>a {
   margin-left: 10%;
   color: rgba(0, 0, 0, 0.692);
 }
+
 .rs_logo {
   opacity: 60%;
 }
+
 .main_page_wrapper {
   display: flex;
   flex-direction: column;
 }
+
 .main_page_about,
 .main_page_video,
 .main_page_team {
@@ -42,18 +53,22 @@ footer {
   background: #ffffffa1;
   padding-top: 5%;
 }
-.about_text > p {
+
+.about_text>p {
   width: 30%;
   margin: 0 auto;
 }
+
 .main_video {
   width: auto;
   max-height: 300px;
 }
+
 .study_wrapper {
   display: flex;
   flex-direction: column;
 }
+
 .units_wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -62,6 +77,7 @@ footer {
   max-width: 60%;
   margin: 0 auto;
 }
+
 .unit_div {
   display: flex;
   justify-content: center;
@@ -72,4 +88,17 @@ footer {
   color: #40a9ff;
   border-radius: 5px;
   font-weight: 600;
+}
+
+.statistic_page {
+  box-shadow: 0 -2px 8px #f0f1f2;
+  border-top: 1px solid #f0f0f0;
+  background: #ffffffd9;
+  width: 100%;
+  max-height: 100%;
+}
+
+.recharts-responsive-container {
+  margin-top: 20px;
+  align-self: center;
 }

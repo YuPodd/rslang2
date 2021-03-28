@@ -27,16 +27,16 @@ export default function Header() {
         mode="horizontal"
       >
         <Menu.Item key="main">
-          <Link to="/mainPage"><h2 className="title">RS Lang</h2></Link>
+          <Link to="/"><h2 className="title">RS Lang</h2></Link>
         </Menu.Item>
         <Menu.Item key="study" icon={<BookOutlined />}>
-          <Link to="/studyPage">Study</Link>
+          <Link to="/study">Study</Link>
         </Menu.Item>
         <Menu.Item key="games"icon={<PlayCircleOutlined />}>
-          <Link to="/gamesPage">Games</Link>
+          <Link to="/games">Games</Link>
         </Menu.Item>
         <Menu.Item key="statistics" icon={<BarChartOutlined />}>
-          <Link to="/statisticsPage">Statistics</Link>
+          <Link to="/statistics">Statistics</Link>
         </Menu.Item>
         
         {!isAuth && <Menu.Item key="signin" onClick={show_signin}>

@@ -2,24 +2,24 @@ import { Link } from "react-router-dom";
 import { useCallback } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Modal, Menu } from "antd";
-import "antd/dist/antd.css";
 import { BarChartOutlined, BookOutlined, PlayCircleOutlined } from "@ant-design/icons";
-import Signup from './Form/Signup'
-import Signin from './Form/Signin'
-import {SHOW_SIGNUP, SHOW_SIGNIN} from '../store/ActionTypes';
+import { SHOW_SIGNUP, SHOW_SIGNIN, LOGOUT } from '../store/ActionTypes';
+import Signup from './Form/SignupForm'
+import Signin from './Form/SigninForm'
+import "antd/dist/antd.css";
 
 export default function Header() {
     const isSignupVisible = useSelector(state => state.isSignupVisible)
     const isSigninVisible = useSelector(state => state.isSigninVisible)
-    const dispatch = useDispatch();
-    const show_signup = useCallback(() => {
-      dispatch({type: SHOW_SIGNUP});
-    }, []);
-    const show_signin = useCallback(() => {
-      dispatch({type: SHOW_SIGNIN});
-    }, []);
-  
+    const isAuth = useSelector(state => state.user.message === "Authenticated" ? true : false)
 
+    const dispatch = useDispatch();
+
+    const show_signup = useCallback(() => { dispatch({type: SHOW_SIGNUP})}, [dispatch]);
+    const show_signin = useCallback(() => { dispatch({type: SHOW_SIGNIN})}, [dispatch]);
+
+    const logout = useCallback(() => { dispatch({type: LOGOUT})}, [dispatch]);
+  
   return (
     <header>
       <Menu
@@ -38,12 +38,17 @@ export default function Header() {
         <Menu.Item key="statistics" icon={<BarChartOutlined />}>
           <Link to="/statisticsPage">Statistics</Link>
         </Menu.Item>
-        <Menu.Item key="signin" onClick={show_signin}>
+        
+        {!isAuth && <Menu.Item key="signin" onClick={show_signin}>
         Sign In
-        </Menu.Item>
-        <Menu.Item key="signup" onClick={show_signup}>
+        </Menu.Item>}
+        {!isAuth && <Menu.Item key="signup" onClick={show_signup}>
         Sign Up
-        </Menu.Item>
+        </Menu.Item>}
+        {isAuth && <Menu.Item key="logout" onClick={logout}>
+        Logout
+        </Menu.Item>}
+
       </Menu>
 
       <Modal //Signin

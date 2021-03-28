@@ -16,7 +16,7 @@ footer {
   padding: 0 10px;
   width: 100%;
   height: 40px;
-  /* position: fixed;
+  position: fixed;
   left: 0;
   bottom: 0;
   right: 0; */
@@ -31,7 +31,7 @@ footer {
   justify-content: space-between;
 }
 
-.github_wrapper>a {
+.github_wrapper > a {
   margin-left: 10%;
   color: rgba(0, 0, 0, 0.692);
 }
@@ -53,8 +53,7 @@ footer {
   background: #ffffffa1;
   padding-top: 5%;
 }
-
-.about_text>p {
+.about_text > p {
   width: 30%;
   margin: 0 auto;
 }
@@ -68,8 +67,7 @@ footer {
   display: flex;
   flex-direction: column;
 }
-
-.units_wrapper {
+.units_wrapper, .games_wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 50px;
@@ -77,8 +75,7 @@ footer {
   max-width: 60%;
   margin: 0 auto;
 }
-
-.unit_div {
+.unit_div, .games_div {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,6 +85,12 @@ footer {
   color: #40a9ff;
   border-radius: 5px;
   font-weight: 600;
+}
+.select_level_title{
+  font-size: 16px;
+}
+.undisplayed{
+  display: none;
 }
 
 .statistic_page {

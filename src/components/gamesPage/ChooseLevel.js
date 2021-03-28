@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Radio } from "antd";
+import { Radio } from "antd";
 import { numberOfUnits } from "../../constants/constants";
 
 export default function ChooseLevel() {

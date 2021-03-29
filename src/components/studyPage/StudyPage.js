@@ -1,15 +1,12 @@
 import "animate.css/animate.css";
+import "./studyPage.css";
 import { Link, Switch, useRouteMatch, Route} from "react-router-dom";
 import {numberOfUnits} from "../../constants/constants"
 import Unit from './Unit'
 
 export default function StudyPage() {
   const { path, url } = useRouteMatch();
-  // const unitRoute = numberOfUnits.map((number) => {
-  //   return (
-      
-  //   )
-  // });
+
   const unit = numberOfUnits.map((number) => {
     return (
       <div
@@ -17,7 +14,7 @@ export default function StudyPage() {
         id={number}
         key={number}
         >
-        <Link to={`${url}/unit-${number}`}>Unit {number}</Link>
+        <Link to={`${url}/unit-${number}/page-0`}>Unit {number}</Link>
       </div>
     );
   });

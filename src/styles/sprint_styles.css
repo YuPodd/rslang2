@@ -1,0 +1,24 @@
+.game_wrapper{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    background: #ffffffb5;
+
+}
+.points_container{
+    height: 20%;
+    background: violet ;
+}
+.game_container{
+    height: 80%;
+    background: yellowgreen;
+}
+.check_marks_container{
+height: 10%;
+}
+.words_container{
+height: 70%;
+}
+.buttons_container{
+height: 20%;
+}

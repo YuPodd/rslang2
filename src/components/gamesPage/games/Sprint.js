@@ -1,29 +1,31 @@
 import { Fragment } from "react";
-import '../../../styles/sprint_styles.css'
+import "../../../styles/sprint_styles.css";
 
 export default function Savanna() {
   return (
     <Fragment>
       <div>Спринт</div>
       <div>Timer</div>
-      <div className="game_wrapper">
-        <div className="points_container">
+      <div className="game_container">
+        <section className="points_section">
           <div>Points</div>
-        </div>
-        <div className="game_container">
-          <div className="check_marks_container">
+        </section>
+        <section className="learn_section">
+          <section className="check_marks_section">
             Галочки
             <div className="check_marks"></div>
-          </div>
-          <div className="words_container">
-          <div>Word</div>
-          <div>Translation</div>
-          </div>
-             <div className="buttons_container">
+          </section>
+          <section className="words_section">
+            <div className="words_wrapper">
+              <div>Word</div>
+              <div>Translation</div>
+            </div>
+          </section>
+          <section className="buttons_container">
             <button>Верно</button>
             <button>Неверно</button>
-          </div>
-        </div>
+          </section>
+        </section>
       </div>
     </Fragment>
   );

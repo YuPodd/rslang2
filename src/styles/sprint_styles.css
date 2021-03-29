@@ -1,24 +1,27 @@
-.game_wrapper{
+.game_container{
     width: 500px;
     height: 500px;
     margin: 0 auto;
     background: #ffffffb5;
 
 }
-.points_container{
+.points_section{
     height: 20%;
     background: violet ;
 }
-.game_container{
+.learn_section{
     height: 80%;
     background: yellowgreen;
 }
-.check_marks_container{
+.check_marks_section{
 height: 10%;
 }
-.words_container{
+.words_section{
 height: 70%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
-.buttons_container{
+.buttons_section{
 height: 20%;
 }

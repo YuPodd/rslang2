@@ -4,8 +4,17 @@ import Savanna from "./games/Savanna";
 import AudioCall from "./games/AudioCall";
 import Sprint from "./games/Sprint";
 import OurGame from "./games/OurGame";
+import {
+  useLastLocation
+} from "react-router-last-location";
+import { useState} from "react";
 
 export default function GamesPage() {
+  
+  const lastLocation = useLastLocation();
+  const [location, setLocation] = useState(lastLocation);
+  console.log(location)
+
   const { path, url } = useRouteMatch();
   const games = listOfGames.map((game) => {
       return (
@@ -26,7 +35,7 @@ export default function GamesPage() {
       </Route>
       <Route path={`${path}/Саванна`} component={Savanna}/>
       <Route path={`${path}/Аудиовызов`} component={AudioCall}/>
-      <Route path={`${path}/Спринт`} component={Sprint}/>
+      <Route path={`${path}/Спринт`} render={()=><Sprint location={location}/>}/>
       <Route path={`${path}/Своя игра`} component={OurGame}/>
     </Switch>
   );

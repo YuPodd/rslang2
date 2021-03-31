@@ -5,13 +5,17 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import store from './store/store';
+import { LastLocationProvider } from "react-router-last-location";
+
 
 ReactDOM.render(
   <React.StrictMode>
   <BrowserRouter>
+  <LastLocationProvider>
     <Provider store={store}>
       <App /> 
     </Provider>
+    </LastLocationProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

@@ -1,7 +1,20 @@
 import { Fragment } from "react";
 import "../../../styles/sprint_styles.css";
+import {
+  SmileTwoTone,
+  HeartTwoTone,
+  CheckCircleTwoTone,
+} from "@ant-design/icons";
+import "antd/dist/antd.css";
+import { Button } from 'antd';
+import { useHistory} from "react-router-dom";
 
-export default function Savanna() {
+export default function Sprint(props) {
+  console.log(props.location);
+if (props.location.pathname.includes('unit')){
+  console.log('user comes from study page')
+}
+
   return (
     <Fragment>
       <div>Спринт</div>
@@ -12,8 +25,12 @@ export default function Savanna() {
         </section>
         <section className="learn_section">
           <section className="check_marks_section">
-            Галочки
-            <div className="check_marks"></div>
+            <div className="check_marks">
+            
+              <CheckCircleTwoTone twoToneColor="#52c41a" />
+              <CheckCircleTwoTone twoToneColor="#52c41a" />
+              <CheckCircleTwoTone twoToneColor="#52c41a" />
+            </div>
           </section>
           <section className="words_section">
             <div className="words_wrapper">
@@ -21,9 +38,9 @@ export default function Savanna() {
               <div>Translation</div>
             </div>
           </section>
-          <section className="buttons_container">
-            <button>Верно</button>
-            <button>Неверно</button>
+          <section className="buttons_section">
+          <Button type="primary" id="button_ok">Верно</Button>
+          <Button type="primary" danger id="button_wrong">Неверно</Button>
           </section>
         </section>
       </div>

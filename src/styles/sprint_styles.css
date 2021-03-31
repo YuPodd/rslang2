@@ -3,15 +3,17 @@
     height: 500px;
     margin: 0 auto;
     background: #ffffffb5;
-
+    border-radius: 10px;
+    box-shadow: 8px 7px 11px 1px #c4c4e3
 }
 .points_section{
     height: 20%;
-    background: violet ;
+    background: #ee82ee69;
+    border-radius: 10px 10px 20% 20%;
 }
 .learn_section{
     height: 80%;
-    background: yellowgreen;
+    
 }
 .check_marks_section{
 height: 10%;
@@ -24,4 +26,8 @@ justify-content: center;
 }
 .buttons_section{
 height: 20%;
+}
+#button_ok{
+    margin-right: 10px;
+    width: 89px;
 }

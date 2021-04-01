@@ -17,13 +17,21 @@ export default function GamesPage() {
 
   const { path, url } = useRouteMatch();
   const games = listOfGames.map((game) => {
+
+      const location = {
+        pathname: `${url}/${game.name}`,
+        state: { from: "GamesPage" }
+      }
+
       return (
         <div
           className="games_div animate__animated animate__backInLeft"
           id={game.name}
           key={game.name}
         >
-          <Link to={`${url}/${game.name}`}>{game.name}<br/>{game.icon}</Link>
+          
+          <Link to={location}>{game.name}<br/>{game.icon}</Link>
+
         </div>
       );
     });

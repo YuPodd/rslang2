@@ -1,13 +1,23 @@
-import { SHOW_SIGNUP, HIDE_SIGNUP, SHOW_SIGNIN, HIDE_SIGNIN, LOGIN_USER, LOGOUT } from './ActionTypes';
+import { SHOW_SIGNUP, HIDE_SIGNUP, SHOW_SIGNIN, HIDE_SIGNIN, LOGIN_USER, LOGOUT, GAME_MODE } from './ActionTypes';
 
 const defaultState = {
   isSignupVisible: false,
   isSigninVisible: false,
-  user: {}
+  user: {},
+  savanna: {
+    from: '',
+  },
 };
 
 const rootReducer = (state = defaultState, action) =>{
   switch (action.type) {
+    case GAME_MODE:
+      return {
+        ...state,
+        savanna:{
+          from: action.from
+        }
+      }
     case LOGOUT:
       return {
         ...state,

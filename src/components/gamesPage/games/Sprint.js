@@ -1,54 +1,37 @@
-import { Fragment } from "react";
+import { Fragment ,useEffect} from "react";
+import { useDispatch, useSelector } from 'react-redux'
+import { GAME_MODE } from '../../../store/ActionTypes'
 import "../../../styles/sprint_styles.css";
-import {
-  SmileTwoTone,
-  HeartTwoTone,
-  CheckCircleTwoTone,
-} from "@ant-design/icons";
 import "antd/dist/antd.css";
-import { Button } from "antd";
-import { useHistory } from "react-router-dom";
+import ChooseLevelModal from "../ChooseLevelModal";
+import SprintGame from './SprintGame'
 
-export default function Sprint(props) {
-  console.log(props.location);
-  if (props.location) {
-    if (props.location.pathname.includes("unit")) {
-      console.log("user comes from study page");
-    }
-  }
+export default function Sprint({location}) {
+  console.log(location)
+  const dispatch = useDispatch();
 
-  return (
-    <Fragment>
-      <div>Спринт</div>
-      <div>Timer</div>
-      <div className="game_container">
-        <section className="points_section">
-          <div>Points</div>
-        </section>
-        <section className="learn_section">
-          <section className="check_marks_section">
-            <div className="check_marks">
-              <CheckCircleTwoTone twoToneColor="#52c41a" />
-              <CheckCircleTwoTone twoToneColor="#52c41a" />
-              <CheckCircleTwoTone twoToneColor="#52c41a" />
-            </div>
-          </section>
-          <section className="words_section">
-            <div className="words_wrapper">
-              <div>Word</div>
-              <div>Translation</div>
-            </div>
-          </section>
-          <section className="buttons_section">
-            <Button type="primary" id="button_ok">
-              Верно
-            </Button>
-            <Button type="primary" danger id="button_wrong">
-              Неверно
-            </Button>
-          </section>
-        </section>
-      </div>
-    </Fragment>
-  );
+  useEffect(() => {
+    dispatch({type: GAME_MODE, from : location.state.from})
+  }, [])
+  const from = useSelector(state => state.savanna.from);
+   
+  if (from.value === GAME_MODE.value){
+    console.log('User comes from main menu');
+    return (
+      <Fragment>
+        <ChooseLevelModal/>
+        <SprintGame/>
+       </Fragment>
+    );
+ 
+  } 
+    console.log('user comes from studyPage');
+    return (
+      <Fragment>
+         <SprintGame/>
+       </Fragment>
+    );
+  
+
+  
 }

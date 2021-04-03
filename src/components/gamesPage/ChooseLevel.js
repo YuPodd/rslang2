@@ -11,7 +11,7 @@ export default function ChooseLevel() {
   }
 
   const radioButton = numberOfUnits.map((level) => {
-    return <Radio value={level} key={level}>Level {level}</Radio>;
+    return <Radio.Button value={level} key={level}>Level {level}</Radio.Button>;
   });
 
   return (

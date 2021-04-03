@@ -1,11 +1,26 @@
-import { Fragment} from "react";
+import { Fragment } from "react";
 import "../../../styles/sprint_styles.css";
-import {CheckCircleTwoTone} from "@ant-design/icons";
+import { CheckCircleTwoTone } from "@ant-design/icons";
 import "antd/dist/antd.css";
 import { Button } from "antd";
 
-export default function Sprint() {
+export default function SprintGame(props) {
+  let randomWord, randomTranslation;
+  
+  getRandomWordAndTranslation();
 
+  function getRandomWordAndTranslation() {
+    const randomNum = Math.round(Math.random());
+    const randomIndex = Math.floor(Math.random() * 21);
+
+    randomWord = props.words[randomIndex].word;
+    
+    randomNum === 0 ? randomTranslation = props.words[randomIndex + 1].wordTranslate : randomTranslation = props.words[randomIndex].wordTranslate;
+    console.log(randomNum, randomIndex, randomWord, randomTranslation);
+  }
+
+
+  function isCorrect() {}
   return (
     <Fragment>
       <div>Спринт</div>
@@ -24,15 +39,20 @@ export default function Sprint() {
           </section>
           <section className="words_section">
             <div className="words_wrapper">
-              <div>Word</div>
-              <div>Translation</div>
+              <div>{randomWord}</div>
+              <div>{randomTranslation}</div>
             </div>
           </section>
           <section className="buttons_section">
-            <Button type="primary" id="button_ok">
+            <Button type="primary" id="button_ok" onClick={() => this.isCorrect(true)}>
               Верно
             </Button>
-            <Button type="primary" danger id="button_wrong">
+            <Button
+              type="primary"
+              danger
+              id="button_wrong"
+              onClick={() => this.isCorrect(false)}
+            >
               Неверно
             </Button>
           </section>
